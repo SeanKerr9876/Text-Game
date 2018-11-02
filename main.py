@@ -62,7 +62,7 @@ def game():
                     print("You can see a rolled up note in the skeleton's clenched hand")
         else:
             print("I don't see that here.")
-    elif "look behind book" in command:
+    elif "look behind book" in command.lower():
         if current_room == rooms['library']:
             if 'note' in inventory:
                 print('You inspect the back panel of the bookshelf behind the dust free book,\nyou find a small black button sticking out of it.')
@@ -75,8 +75,6 @@ def game():
                     current_room['text'] += ' There is an opening to the east'
             else:
                 print('You already did that.')
-        else:
-            print("You can't push that")
     # read things
     elif command.lower().split()[0] == 'read':
         if command.lower().split()[1] == 'note':
