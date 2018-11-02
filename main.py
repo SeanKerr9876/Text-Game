@@ -67,7 +67,7 @@ def game():
             if 'note' in inventory:
                 print('You inspect the back panel of the bookshelf behind the dust free book,\nyou find a small black button sticking out of it.')
     # press secret button
-    elif command.lower().split()[0] == 'push':
+    elif 'push button' in command.lower():
         if current_room == rooms['library']:
             if not rm_open:
                     secret()
